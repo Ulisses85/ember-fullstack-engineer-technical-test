@@ -14,7 +14,11 @@ export default function Home({ data }: any) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  context.res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=300, stale-while-revalidate=360'
+  )
   const res = await fetch(`http://localhost:3000/api/weather`, {
     method: "GET",
   });

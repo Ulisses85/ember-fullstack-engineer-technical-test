@@ -1,5 +1,36 @@
 # Ember Technical Assessment
 
+Run `yarn` inside project in order to install dependecies.
+
+Run `yarn run dev` in order to run the application.
+
+Go to `http://localhost:3000` you should see running app.
+Go to `http://localhost:3000/api/weather` you should see api endpoint response.
+
+api sample response:
+
+````
+{
+   "weatherData":[
+      {
+         "avgTemp":15,
+         "minTemp":13.2,
+         "maxTemp":15.39,
+         "description":"light rain",
+         "icon":"10n",
+         "windSpeed":1.93,
+         "windDirection":330,
+         "city":"Oleśnica",
+         "day": "Sunday"
+       },
+       ...
+       ]
+}
+````
+
+
+
+
 ## Current Setup
 
 This repository has been setup with an almost blank Next.JS project using
